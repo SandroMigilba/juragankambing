@@ -1,0 +1,334 @@
+/* Reset dan style umum */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #01A64A;
+    /* background-image:  url('/logo-Juragan\ Kambing-02.jpg'); 
+    background-size: cover;
+    background-repeat: no-repeat; */
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    height: 100vh;
+    overflow: auto;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #585858c9;
+}
+
+.bground img {
+    width: 40vw;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -3;
+}
+
+.logo img {
+    float: left;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: green;
+    color: #fff;
+    padding: 10px 0;
+    z-index: 3;
+}
+
+header h1 {
+    float: left;
+}
+
+header nav ul {
+    float: right;
+    list-style: none;
+    padding: 13px 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin-left: 10px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: 0.5s;
+    border-bottom: 2px solid transparent;
+}
+
+li a:hover {
+    border-bottom: 2px solid rgb(0, 255, 200);
+}
+
+.hero {
+    width: 80%;
+    height: 60vh;
+    color: #fff;
+    padding: 70px 0;
+    /* margin-top: 5vh; */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 15px;
+    background-color: #00000077;
+}
+
+.container {
+    width: 90%;
+    margin: auto;
+    text-align: center;
+}
+
+header .container {
+    height: 7vh;
+}
+
+.services .service {
+    margin: 0 auto;
+    width: 40vw;
+    text-align: left;
+}
+
+.service h3 {
+    text-align: center;
+}
+.product {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 130px 10px 70px 10px;
+}
+
+.product img {
+    transition: 0.5s;
+    width: 100%;
+    max-width: 350px;
+    height: 300px;
+    object-fit: cover;
+    border: 2px solid transparent;
+    border-radius: 10px;
+}
+
+.product img:hover {
+    box-shadow: 0px 0 10px lime;
+    border: 2px solid white;
+    cursor: pointer;
+    scale: 1.05;
+}
+
+.product::after {
+    content: "";
+    width: 350px;
+}
+
+.contact {
+    overflow: auto;
+}
+
+.contact-kontak_kami {
+    background-color: grey;
+    margin-top: 10vh;
+    height: 15rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.contact div p span {
+    font-size: 160%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact .container img {
+    /* position: absolute; */
+    width: 40vw;
+    display: flex;
+    margin: auto;
+    margin-top: 6vh;
+    margin-bottom: 10vh;
+    border-radius: 15px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.523);
+
+}
+
+.alamat-kontak img {
+    width: 15%;
+    display: flex;
+    margin: auto;
+    margin-top: 10vh;
+}
+
+.alamat-kontak .maps iframe {
+    margin-top: 50vh;
+    border-radius: 15px;
+    margin-bottom: -20vh;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0px 0px 0px 2px grey;
+}
+
+.alamat,
+.our-contact,
+.email {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-our-contact {
+    background-color: green;
+    padding: 10px 20px;
+    border-radius: 30px;
+    color: white;
+}
+
+.btn-maps {
+    margin-top: -5vh;
+}
+
+.btn-email {
+    padding: 10px 45px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.chat {
+    position: fixed;
+    display: flex;
+    gap: 10px;
+    bottom: 9vh;
+    right: 5vw;
+}
+
+.chat img {
+    border-radius: 15px;
+    width: 4rem;
+    right: 10px;
+    z-index: 10;
+    transition: 0.5s;
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.523); */
+}
+
+.chat img:hover {
+    scale: 1.2;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.523);
+}
+
+footer {
+    background: rgb(0, 128, 0);
+    color: #fff;
+    padding: 2px 0;
+    text-align: center;
+    position: fixed;
+    align-items: center;
+    bottom: 0;
+    width: 100%;
+}
+
+@media (width < 600px) {
+    * {
+        font-size: 97%;
+    }
+
+    header ul {
+        display: flex;
+        /* justify-content: center; */
+    }
+
+    header .container .logo h1 {
+        display: none;
+    }
+
+    .hero {
+        width: 95%;
+        height: auto;
+        padding: 20px 5px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    p {
+        text-align: justify;
+    }
+
+    .bground img {
+        width: 20rem;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .services {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .services .service {
+        width: 99%;
+    }
+
+    .product {
+        height: 100vh;
+    }
+
+    .contact {
+        height: 100vh;
+    }
+
+    .contact .container img {
+        width: 90%;
+    }
+
+    .contact-kontak_kami p {
+        width: 80%;
+        text-align: center;
+    }
+
+    .alamat-kontak .maps iframe {
+        width: 75%;
+    }
+
+    footer .container p {
+        text-align: center;
+    }
+
+    ::-webkit-scrollbar {
+        display: none;
+    }
+}
